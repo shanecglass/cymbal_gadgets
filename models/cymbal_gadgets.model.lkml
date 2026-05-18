@@ -1,4 +1,4 @@
-connection: "cymbal_gadgets"
+connection: "scg-test-and-dev"
 
 include: "/views/*"
 include: "/dashboards/*"
