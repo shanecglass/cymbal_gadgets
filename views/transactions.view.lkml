@@ -271,6 +271,14 @@ view: transactions {
     sql: ${customerid} ;;
   }
 
+  measure: customer_lifetime_value {
+    label: "Customer Lifetime Value (CLV)"
+    description: "Average revenue generated per customer."
+    type: number
+    sql: 1.0 * ${total_revenue} / NULLIF(${unique_customers}, 0) ;;
+    value_format_name: usd
+  }
+
   dimension: shipment_status {
     label: "Shipment status"
     sql: ${TABLE}.shipment_status;;
